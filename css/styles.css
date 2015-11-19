@@ -1,0 +1,174 @@
+/* Set some resets */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, input, a, fieldset, th, td {
+  border: 0;
+  margin: 0; 
+  outline: none;
+  padding: 0; 
+}
+
+/*
+
+colors:
+#FAEBD7 - body bg
+
+#292929 - text
+
+#FFFEFD - wrap bg
+
+#BBC1C6 - border colors
+
+#8C98A1 - darker border
+
+ */
+
+/* General styles */
+body {
+  background: #FAEBD7;
+  color: #292929;
+  font-family: 'Verdana', 'Arial', sans-script;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+/* styling links */
+a, a:active, a:visited {
+  color: #2E74AA;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFAA39;
+}
+
+/* wrap styles */
+.wrap {
+  background: #FFFEFD;
+  margin: 2% auto;
+  padding: 2%;
+  width: 90%;
+}
+
+/* filters div styles */
+.filters {
+  border-bottom: 2px dotted #BBC1C6;
+  margin-bottom: 1.5em;
+  padding: 0 0.5em 1.5em 0.5em; 
+}
+
+input#filter  {
+  border: solid 3px #BBC1C6;
+  font-size: 1em;
+  padding: 0.5em;
+  transition: border 0.3s;
+}
+
+input#filter:focus {
+  border: solid 3px #8C98A1;
+}
+
+#sort {
+  background: #8C98A1;
+  color: #fff;
+  display: block;
+  float: right;
+  margin: 0 1em 0 0;
+  padding: 0.6em;
+}
+
+/* result styles ul */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  border-bottom: 1px solid #BBC1C6;
+  clear: both;
+  margin: 1em 0;
+  overflow: hidden;
+  padding: 0 0.5em 1em 0.5em;
+}
+
+/* title styles */
+h2 {
+  font-weight: 200;
+}
+
+h2:after, h3:after,
+h2.carot-up:after, h3.carot-up:after {
+  color: #8C98A1;
+  content:'\25B2';
+  font-size: 0.7em;
+  line-height: 1em;
+  margin-left: 10px;
+}
+
+h2:after, h3:after {
+  content:'\25BC'
+}
+
+/* main article styles */
+.content {
+  padding: 1em 0.5em 0 0.5em;
+}
+
+.content a {
+  margin-left: 1em;
+}
+
+img {
+  display: block;
+  float: left;
+  height: auto;
+  max-width: 230px;
+  padding-right: 1em;
+}
+
+small {
+  font-style: italic;
+}
+
+p {
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+
+/* related article styles */
+h3 {
+  clear: both;
+  padding: 0.7em 0; 
+}
+
+h4 {
+  font-weight: 500;
+  line-height: 1.5em;
+  margin: 0.5em;
+}
+
+
+/* mobile styles */
+@media screen and (max-width: 575px) {
+  img {
+    float: none;
+    margin-top: 0.5em auto;
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .filters {
+    overflow: hidden;
+    padding-top: 1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #sort {
+    display: inline-block;
+    float: none;
+    margin: 1em 0 0 0; 
+  }
+}
